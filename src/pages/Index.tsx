@@ -286,7 +286,7 @@ export default function Index() {
               </div>
 
               <div className="relative">
-                <div ref={diningCarouselRef} className="hidden md:flex gap-4 overflow-hidden">
+                <div ref={diningCarouselRef} className="flex flex-col md:flex-row gap-4 overflow-hidden">
                   {diningSlides.map((slide, index) => (
                     <div key={slide.id} className="min-w-[320px] group cursor-pointer transform transition-transform duration-300 hover:scale-105">
                       <div className="relative h-[400px] rounded-2xl overflow-hidden mb-4">
@@ -295,25 +295,25 @@ export default function Index() {
                         <div className="absolute bottom-6 left-6 right-6">
                           <div className="uppercase text-xs tracking-wider text-gray-300 mb-2">{slide.location}</div>
                           <h3 className="text-xl font-bold mb-3 text-white">{slide.title}</h3>
-                          <div className="flex items-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                          {/* <div className="flex items-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
                             <ArrowRight className="h-4 w-4" />
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <button 
+                {/* <button 
                   onClick={nextDiningSlide}
                   className="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-black p-3 rounded-full hover:bg-gray-100 transition-colors z-10"
                 >
                   <ArrowRight className="h-4 w-4" />
-                </button>
+                </button> */}
               </div>
             </div>
 
-            <div className="flex justify-center gap-2 mt-8">
+            {/* <div className="flex justify-center gap-2 mt-8">
               {diningSlides.map((_, index) => (
                 <button 
                   key={index}
@@ -323,7 +323,7 @@ export default function Index() {
                   }`}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -470,7 +470,7 @@ export default function Index() {
         {/* <MissionSection /> */}
         
         {/* Testimonials Section */}
-        {/* <TestimonialsSection /> */}
+        <TestimonialsSection />
         
         {/* Features Section */}
         <section className="section bg-card">
@@ -515,9 +515,9 @@ export default function Index() {
               <p className="text-foreground/70 mb-8">
                 {t.home.cta.description}
               </p>
-              <Button asChild size="lg" className="btn-primary">
+              {/* <Button asChild size="lg" className="btn-primary">
                 <Link to="/booking">{t.home.cta.bookNow}</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </section>
