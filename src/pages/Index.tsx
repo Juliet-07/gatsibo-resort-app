@@ -19,7 +19,7 @@ const featuredApartments: AccommodationProps[] = [
     id: "1",
     name: "Private Villas",
     description: "Spacious private villas with panoramic views, perfect for families or groups seeking privacy and comfort.",
-    price: 180000,
+    price: 120000,
     capacity: 2,
     size: 45,
     image: "/img/accommodation/private-villas.png",
@@ -30,7 +30,7 @@ const featuredApartments: AccommodationProps[] = [
     id: "2",
     name: "Cultural Suites",
     description: "Elegantly designed suites featuring locally inspired interiors and authentic Rwandan craftsmanship.",
-    price: 250000,
+    price: 100000,
     capacity: 4,
     size: 75,
     image: "/img/accommodation/cultural-suites.jpg",
@@ -41,7 +41,7 @@ const featuredApartments: AccommodationProps[] = [
     id: "3",
     name: "Garden Rooms",
     description: "Intimate rooms with garden views, featuring natural materials and peaceful ambiance for solo travelers or couples.",
-    price: 150000,
+    price: 70000,
     capacity: 2,
     size: 35,
     image: "/img/accommodation/garden-rooms.png",
@@ -142,16 +142,16 @@ export default function Index() {
   
   // Feature items
   const features = [
-    {
-      icon: <Waves className="h-8 w-8 text-primary" />,
-      title: t.home.amenities.features.beachfront.title,
-      description: t.home.amenities.features.beachfront.description
-    },
-    {
-      icon: <LifeBuoy className="h-8 w-8 text-primary" />,
-      title: t.home.amenities.features.pools.title,
-      description: t.home.amenities.features.pools.description
-    },
+    // {
+    //   icon: <Waves className="h-8 w-8 text-primary" />,
+    //   title: t.home.amenities.features.beachfront.title,
+    //   description: t.home.amenities.features.beachfront.description
+    // },
+    // {
+    //   icon: <LifeBuoy className="h-8 w-8 text-primary" />,
+    //   title: t.home.amenities.features.pools.title,
+    //   description: t.home.amenities.features.pools.description
+    // },
     {
       icon: <Utensils className="h-8 w-8 text-primary" />,
       title: t.home.amenities.features.restaurant.title,
@@ -487,7 +487,7 @@ export default function Index() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div 
                   key={index} 

@@ -12,7 +12,7 @@ export const en = {
   hero: {
     subtitle: "Gatsibo Paradise",
     title: "Welcome to a Place Where Culture Meets Tranquility",
-    description: "Nestled in the heart of Rwanda, our Resort and Cultural Center offers a unique blend of natural beauty and living heritage.",
+    description: "Nestled in the Eastern Province of Rwanda, our Resort and Cultural Center offers a unique blend of natural beauty and living heritage and also a perfect gateway to Akagera National Park.",
     bookStay: "Book Your Stay",
     exploreAccommodations: "Explore Accommodations",
     scrollDown: "Scroll Down"
@@ -64,12 +64,12 @@ export const en = {
           description: "Complimentary high-speed internet throughout the resort"
         },
         bar: {
-          title: "Pool Bar",
-          description: "Refreshing cocktails and beverages by the poolside"
+          title: "Executive Bar",
+          description: "Refreshing cocktails and beverages at the bar with a refreshing view"
         },
         location: {
           title: "Prime Location",
-          description: "Located in the heart of the most beautiful coastal area"
+          description: "Located in the Eastern Province towards Akagera game reserves"
         }
       }
     },
@@ -109,7 +109,7 @@ export const en = {
     },
     cta: {
       title: "Ready for Your Dream Vacation?",
-      description: "Book now and experience the ultimate in luxury and relaxation. Your perfect getaway awaits.",
+      description: "Book now and experience the ultimate in luxury and relaxation. Your perfect getaway to Akagera National Park",
       bookNow: "Book Now"
     }
   },
@@ -298,7 +298,7 @@ export const en = {
     phone: "Phone",
     email: "Email",
     receptionHours: "Reception Hours",
-    checkInTime: "Check-in: 3:00 PM",
+    checkInTime: "Check-in: 2:00 PM",
     checkOutTime: "Check-out: 11:00 AM",
     sendMessage: "Send us a Message",
     fullName: "Full Name",

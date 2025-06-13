@@ -162,10 +162,10 @@ export default function ResortDetails() {
           </div>
         </section>
         {/* Filter Section */}
-        <section className="py-8 border-b">
+        {/* <section className="py-8 border-b">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
-              {/* Capacity Filter */}
+              Capacity Filter
               <div>
                 <label className="block text-sm font-medium mb-2">
                   {t.accommodations.filters.guests}
@@ -199,7 +199,7 @@ export default function ResortDetails() {
                 </Select>
               </div>
 
-              {/* Location Filter */}
+              Location Filter
               <div>
                 <label className="block text-sm font-medium mb-2">
                   {t.accommodations.filters.location}
@@ -228,7 +228,7 @@ export default function ResortDetails() {
                 </Select>
               </div>
 
-              {/* Price Range Filter */}
+              Price Range Filter
               <div>
                 <label className="block text-sm font-medium mb-2">
                   {t.accommodations.filters.priceRange}:{" "}
@@ -266,7 +266,7 @@ export default function ResortDetails() {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Accommodations Grid */}
         <section className="section">
@@ -404,40 +404,44 @@ export default function ResortDetails() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div
                 id="games-card"
-                className="bg-cream p-8 rounded-xl border border-border text-center"
+                className="bg-cream p-8 rounded-xl border border-border"
               >
-                <div className="text-primary text-4xl mb-4">🎮</div>
-                <h3 className="font-semibold text-xl text-black mb-4">
-                  Outdoor Games
+                <div className="text-primary text-4xl mb-4 text-center">🎮</div>
+                <h3 className="font-semibold text-xl text-black mb-4 text-center">
+                  Recreational Activities
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-4 text-center">
                   Traditional games and modern activities for guests of all ages
                   to enjoy together.
                 </p>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Traditional board games</li>
-                  <li>• Volleyball court</li>
-                  <li>• Children's play area</li>
-                </ul>
+                <div className="flex items-center justify-center">
+                  <ul className="text-sm text-muted-foreground space-y-1 list-disc">
+                    <li> Visit to the Akagera National Park</li>
+                    <li> Mountain viewing</li>
+                    <li> Cultural activities</li>
+                  </ul>
+                </div>
               </div>
 
               <div
                 id="bonfire-card"
-                className="bg-cream p-8 rounded-xl border border-border text-center"
+                className="bg-cream p-8 rounded-xl border border-border"
               >
-                <div className="text-primary text-4xl mb-4">🔥</div>
-                <h3 className="font-semibold text-xl text-black mb-4">
+                <div className="text-primary text-4xl mb-4 text-center">🔥</div>
+                <h3 className="font-semibold text-xl text-black mb-4 text-center">
                   Evening Bonfires
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-4 text-center">
                   Gather around warm fires for storytelling, music, and
                   community connection.
                 </p>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Nightly bonfire sessions</li>
-                  <li>• Traditional music</li>
-                  <li>• Storytelling circles</li>
-                </ul>
+                <div className="flex items-center justify-center">
+                  <ul className="text-sm text-muted-foreground space-y-1 list-disc">
+                    <li> Nightly bonfire sessions</li>
+                    <li> Traditional music</li>
+                    <li> Storytelling circles</li>
+                  </ul>
+                </div>
               </div>
 
               <div
@@ -574,23 +578,23 @@ export default function ResortDetails() {
               every moment becomes a cherished memory.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all">
                 Book Your Stay Now
               </button>
               <button className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary hover:text-white transition-all">
                 View Availability
               </button>
-            </div>
+            </div> */}
 
             <div className="mt-8 flex items-center justify-center space-x-6 text-sm text-muted-foreground">
               <div className="flex items-center">
                 <Phone className="text-primary mr-2 h-4 w-4" />
-                <span>+250 123 456 789</span>
+                <span>+250 788 517 761</span>
               </div>
               <div className="flex items-center">
                 <Mail className="text-primary mr-2 h-4 w-4" />
-                <span>reservations@rwandaresort.com</span>
+                <span>jbkalisa@gmail.com</span>
               </div>
             </div>
           </div>

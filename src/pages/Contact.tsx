@@ -100,11 +100,11 @@ export default function Contact() {
                         {t.contact.address}
                       </h3>
                       <p className="text-muted-foreground">
-                        123 Seaside Boulevard
+                        Eatern Province
                         <br />
-                        Costa Bella, 12345
+                        Towards Akagera Game Reserve
                         <br />
-                        Italy
+                        Rwanda
                       </p>
                     </div>
                   </div>
@@ -115,9 +115,9 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.phone}</h3>
-                      <p className="text-muted-foreground">+39 123 4567 890</p>
+                      <p className="text-muted-foreground">+250 788 305 943</p>
                       <p className="text-muted-foreground">
-                        +39 098 7654 321 (Reservations)
+                        +250 788 517 761 (Reservations)
                       </p>
                     </div>
                   </div>
@@ -129,10 +129,10 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.email}</h3>
                       <p className="text-muted-foreground">
-                        info@maresereno.com
+                        info@gatsiboresort.com
                       </p>
                       <p className="text-muted-foreground">
-                        reservations@maresereno.com
+                        jbkalisa@gmail.com
                       </p>
                     </div>
                   </div>

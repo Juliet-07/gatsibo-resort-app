@@ -47,10 +47,10 @@ export default function AccommodationCard({ accommodation }: { accommodation: Ac
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
           <div>
             <h3 className="text-white text-xl font-bold mb-1">{translatedName}</h3>
-            <div className="flex items-center text-white/80 text-sm mb-2">
+            {/* <div className="flex items-center text-white/80 text-sm mb-2">
               <MapPin className="h-4 w-4 mr-1" />
               <span>{accommodation.location}</span>
-            </div>
+            </div> */}
             <div className="flex items-center space-x-3 text-white">
               <div className="flex items-center">
                 <Users className="h-4 w-4 mr-1" />

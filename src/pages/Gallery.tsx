@@ -325,14 +325,14 @@ export default function Gallery() {
           <p className="text-white/90 text-lg mb-8 leading-relaxed">
           Every image tells a story waiting to be lived. Join us and become part of Rwanda's continuing narrative of culture, nature, and community.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-dusky px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cream transition-all">
               Book Cultural Experience
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-dusky transition-all">
             Plan Your Visit
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
       </main>
