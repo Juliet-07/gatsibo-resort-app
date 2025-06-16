@@ -4,13 +4,25 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import AccommodationCard, { AccommodationProps } from "@/components/AccommodationCard";
+import AccommodationCard, {
+  AccommodationProps,
+} from "@/components/AccommodationCard";
 import ValuePropositionSection from "@/components/sections/ValuePropositionSection";
 import ExperiencesCarousel from "@/components/sections/ExperiencesCarousel";
 import MissionSection from "@/components/sections/MissionSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Wifi, Utensils, Waves, LifeBuoy, MapPin, Coffee, Bed, ArrowLeft } from "lucide-react";
+import {
+  ArrowRight,
+  Wifi,
+  Utensils,
+  Waves,
+  LifeBuoy,
+  MapPin,
+  Coffee,
+  Bed,
+  ArrowLeft,
+} from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Sample apartments data
@@ -18,75 +30,96 @@ const featuredApartments: AccommodationProps[] = [
   {
     id: "1",
     name: "Private Villas",
-    description: "Spacious private villas with panoramic views, perfect for families or groups seeking privacy and comfort.",
+    description:
+      "Spacious private villas with panoramic views, perfect for families or groups seeking privacy and comfort.",
     price: 120000,
     capacity: 2,
     size: 45,
     image: "/img/accommodation/private-villas.png",
     location: "Beachfront",
-    features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Balcony"]
+    features: [
+      "Wi-Fi",
+      "Kitchen",
+      "Bathroom",
+      "Air Conditioning",
+      "TV",
+      "Balcony",
+    ],
   },
   {
     id: "2",
     name: "Cultural Suites",
-    description: "Elegantly designed suites featuring locally inspired interiors and authentic Rwandan craftsmanship.",
+    description:
+      "Elegantly designed suites featuring locally inspired interiors and authentic Rwandan craftsmanship.",
     price: 100000,
     capacity: 4,
     size: 75,
     image: "/img/accommodation/cultural-suites.jpg",
     location: "Second row",
-    features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Washing Machine"]
+    features: [
+      "Wi-Fi",
+      "Kitchen",
+      "Bathroom",
+      "Air Conditioning",
+      "TV",
+      "Washing Machine",
+    ],
   },
   {
     id: "3",
     name: "Garden Rooms",
-    description: "Intimate rooms with garden views, featuring natural materials and peaceful ambiance for solo travelers or couples.",
+    description:
+      "Intimate rooms with garden views, featuring natural materials and peaceful ambiance for solo travelers or couples.",
     price: 70000,
     capacity: 2,
     size: 35,
     image: "/img/accommodation/garden-rooms.png",
     location: "Beachfront",
-    features: ["Wi-Fi", "Kitchenette", "Bathroom", "Air Conditioning", "TV"]
-  }
+    features: ["Wi-Fi", "Kitchenette", "Bathroom", "Air Conditioning", "TV"],
+  },
 ];
 
 export default function Index() {
   const { t } = useLanguage();
-  
+
   // State for dining carousel
   const [diningActiveSlide, setDiningActiveSlide] = useState(0);
   const diningCarouselRef = useRef<HTMLDivElement>(null);
-  
+
   // State for adventure carousel
   const [adventureActiveSlide, setAdventureActiveSlide] = useState(0);
   const adventureCarouselRef = useRef<HTMLDivElement>(null);
-  
+
   const diningSlides = [
     {
       id: 1,
       location: "KIGALI HEIGHTS, RWANDA",
       title: "Creative Rwandan amid dramatic mountain views",
-      image: "https://storage.googleapis.com/uxpilot-auth.appspot.com/df2d89aa28-5483ceaf9a01088a0873.png"
+      image:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/df2d89aa28-5483ceaf9a01088a0873.png",
     },
     {
       id: 2,
-      location: "LAKE KIVU, RWANDA", 
+      location: "LAKE KIVU, RWANDA",
       title: "Elevated African fare with lakeside flair",
-      image: "https://storage.googleapis.com/uxpilot-auth.appspot.com/cf16fe2410-0f3d70a4dded26c5048b.png"
-    }
+      image:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/cf16fe2410-0f3d70a4dded26c5048b.png",
+    },
   ];
 
   const adventureSlides = [
     {
       id: 1,
       title: "Cultural Performances",
-      image: "https://storage.googleapis.com/uxpilot-auth.appspot.com/bf5e233962-72eeea5cdbbb547b3ba9.png"
+      image:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/bf5e233962-72eeea5cdbbb547b3ba9.png",
     },
     {
       id: 2,
-      title: "Luxury Stays", 
-      image: "https://storage.googleapis.com/uxpilot-auth.appspot.com/5408eec1da-1ad175b3959d4f114f18.png"
-    }
+      title: "Luxury Stays",
+      image:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/5408eec1da-1ad175b3959d4f114f18.png",
+    },
   ];
 
   // Dining carousel navigation
@@ -96,18 +129,19 @@ export default function Index() {
     if (diningCarouselRef.current) {
       diningCarouselRef.current.scrollTo({
         left: nextIndex * 320,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
   const prevDiningSlide = () => {
-    const prevIndex = (diningActiveSlide - 1 + diningSlides.length) % diningSlides.length;
+    const prevIndex =
+      (diningActiveSlide - 1 + diningSlides.length) % diningSlides.length;
     setDiningActiveSlide(prevIndex);
     if (diningCarouselRef.current) {
       diningCarouselRef.current.scrollTo({
         left: prevIndex * 320,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -119,18 +153,20 @@ export default function Index() {
     if (adventureCarouselRef.current) {
       adventureCarouselRef.current.scrollTo({
         left: nextIndex * 600,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
   const prevAdventureSlide = () => {
-    const prevIndex = (adventureActiveSlide - 1 + adventureSlides.length) % adventureSlides.length;
+    const prevIndex =
+      (adventureActiveSlide - 1 + adventureSlides.length) %
+      adventureSlides.length;
     setAdventureActiveSlide(prevIndex);
     if (adventureCarouselRef.current) {
       adventureCarouselRef.current.scrollTo({
         left: prevIndex * 600,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -139,7 +175,7 @@ export default function Index() {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-  
+
   // Feature items
   const features = [
     // {
@@ -155,29 +191,29 @@ export default function Index() {
     {
       icon: <Utensils className="h-8 w-8 text-primary" />,
       title: t.home.amenities.features.restaurant.title,
-      description: t.home.amenities.features.restaurant.description
+      description: t.home.amenities.features.restaurant.description,
     },
     {
       icon: <Wifi className="h-8 w-8 text-primary" />,
       title: t.home.amenities.features.wifi.title,
-      description: t.home.amenities.features.wifi.description
+      description: t.home.amenities.features.wifi.description,
     },
     {
       icon: <Coffee className="h-8 w-8 text-primary" />,
       title: t.home.amenities.features.bar.title,
-      description: t.home.amenities.features.bar.description
+      description: t.home.amenities.features.bar.description,
     },
     {
       icon: <MapPin className="h-8 w-8 text-primary" />,
       title: t.home.amenities.features.location.title,
-      description: t.home.amenities.features.location.description
-    }
+      description: t.home.amenities.features.location.description,
+    },
   ];
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
         <HeroSection />
@@ -186,8 +222,14 @@ export default function Index() {
           <div className="container mx-auto px-5">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-6">Welcome to Rwanda Resort & Cultural Center</h2>
-                <p className="text-foreground/70 mb-6">Where luxury meets tradition, our resort offers an unparalleled experience that combines modern comfort with Rwanda's rich cultural heritage.</p>
+                <h2 className="text-3xl font-bold mb-6">
+                  Welcome to Gatsibo Paradise Resort and Cultural Center
+                </h2>
+                <p className="text-foreground/70 mb-6">
+                  Where luxury meets tradition, our resort offers an
+                  unparalleled experience that combines modern comfort with
+                  Rwanda's rich cultural heritage.
+                </p>
                 <div className="flex space-x-6">
                   <div className="text-center">
                     <Bed className="text-2xl text-primary mb-2 mx-auto" />
@@ -204,32 +246,46 @@ export default function Index() {
                 </div>
               </div>
               <div className="relative h-[400px]">
-                <img className="rounded-lg object-cover w-full h-full" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5408eec1da-1ad175b3959d4f114f18.png" alt="luxurious hotel room interior with traditional Rwandan decor elements" />
+                <img
+                  className="rounded-lg object-cover w-full h-full"
+                  src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5408eec1da-1ad175b3959d4f114f18.png"
+                  alt="luxurious hotel room interior with traditional Rwandan decor elements"
+                />
               </div>
             </div>
           </div>
         </section>
         {/* Value Proposition Section */}
         <ValuePropositionSection />
-        
+
         {/* Experiences Carousel */}
         <ExperiencesCarousel />
-
-        
 
         {/* New Highlights Section */}
         <section id="highlights" className="py-20 bg-muted">
           <div className="container mx-auto px-5">
-            <h2 className="text-center text-3xl font-bold mb-12">Experience Our Offerings</h2>
+            <h2 className="text-center text-3xl font-bold mb-12">
+              Experience Our Offerings
+            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition-shadow">
                 <div className="h-48">
-                  <img className="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/bf5e233962-72eeea5cdbbb547b3ba9.png" alt="traditional Rwandan dance performance in cultural setting" />
+                  <img
+                    className="w-full h-full object-cover"
+                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/bf5e233962-72eeea5cdbbb547b3ba9.png"
+                    alt="traditional Rwandan dance performance in cultural setting"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="font-bold text-xl mb-3">Cultural Center</h3>
-                  <p className="text-foreground/70 mb-4">Immerse yourself in authentic Rwandan traditions through performances, workshops, and exhibitions.</p>
-                  <Link to="/cultural-center" className="text-primary font-semibold flex items-center cursor-pointer hover:text-primary/80">
+                  <p className="text-foreground/70 mb-4">
+                    Immerse yourself in authentic Rwandan traditions through
+                    performances, workshops, and exhibitions.
+                  </p>
+                  <Link
+                    to="/cultural-center"
+                    className="text-primary font-semibold flex items-center cursor-pointer hover:text-primary/80"
+                  >
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
@@ -237,12 +293,24 @@ export default function Index() {
 
               <div className="bg-white rounded-lg overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition-shadow">
                 <div className="h-48">
-                  <img className="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5c572cc9b2-7226f97014b719392cf7.png" alt="luxury resort pool with mountain view in Rwanda" />
+                  <img
+                    className="w-full h-full object-cover"
+                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5c572cc9b2-7226f97014b719392cf7.png"
+                    alt="luxury resort pool with mountain view in Rwanda"
+                  />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-xl mb-3">Luxury Accommodation</h3>
-                  <p className="text-foreground/70 mb-4">Experience comfort in our thoughtfully designed rooms that blend modern luxury with local aesthetics.</p>
-                  <Link to="/accommodations" className="text-primary font-semibold flex items-center cursor-pointer hover:text-primary/80">
+                  <h3 className="font-bold text-xl mb-3">
+                    Luxury Accommodation
+                  </h3>
+                  <p className="text-foreground/70 mb-4">
+                    Experience comfort in our thoughtfully designed rooms that
+                    blend modern luxury with local aesthetics.
+                  </p>
+                  <Link
+                    to="/accommodations"
+                    className="text-primary font-semibold flex items-center cursor-pointer hover:text-primary/80"
+                  >
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
@@ -250,12 +318,22 @@ export default function Index() {
 
               <div className="bg-white rounded-lg overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition-shadow">
                 <div className="h-48">
-                  <img className="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0d33435f1c-7e85c46ac25dbe6a826a.png" alt="gourmet Rwandan cuisine plated elegantly" />
+                  <img
+                    className="w-full h-full object-cover"
+                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0d33435f1c-7e85c46ac25dbe6a826a.png"
+                    alt="gourmet Rwandan cuisine plated elegantly"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="font-bold text-xl mb-3">Dining Experience</h3>
-                  <p className="text-foreground/70 mb-4">Savor the finest Rwandan cuisine prepared by our expert chefs using local ingredients.</p>
-                  <Link to="/amenities" className="text-primary font-semibold flex items-center cursor-pointer hover:text-primary/80">
+                  <p className="text-foreground/70 mb-4">
+                    Savor the finest Rwandan cuisine prepared by our expert
+                    chefs using local ingredients.
+                  </p>
+                  <Link
+                    to="/amenities"
+                    className="text-primary font-semibold flex items-center cursor-pointer hover:text-primary/80"
+                  >
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
@@ -269,14 +347,19 @@ export default function Index() {
           <div className="container mx-auto px-5">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="max-w-lg">
-                <div className="uppercase text-sm tracking-wider mb-4 text-foreground/70">TRANSCEND</div>
+                <div className="uppercase text-sm tracking-wider mb-4 text-foreground/70">
+                  TRANSCEND
+                </div>
                 <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                  Discover Tastes<br />
-                  That Will Change<br />
+                  Discover Tastes
+                  <br />
+                  That Will Change
+                  <br />
                   You Forever
                 </h2>
                 <p className="text-foreground/70 mb-8 text-lg">
-                  Welcome to our collection of award-winning dining experiences around Rwanda.
+                  Welcome to our collection of award-winning dining experiences
+                  around Rwanda.
                 </p>
                 <Button asChild className="btn-primary">
                   <Link to="/amenities">
@@ -286,15 +369,29 @@ export default function Index() {
               </div>
 
               <div className="relative">
-                <div ref={diningCarouselRef} className="flex flex-col md:flex-row gap-4 overflow-hidden">
+                <div
+                  ref={diningCarouselRef}
+                  className="flex flex-col md:flex-row gap-4 overflow-hidden"
+                >
                   {diningSlides.map((slide, index) => (
-                    <div key={slide.id} className="min-w-[320px] group cursor-pointer transform transition-transform duration-300 hover:scale-105">
+                    <div
+                      key={slide.id}
+                      className="min-w-[320px] group cursor-pointer transform transition-transform duration-300 hover:scale-105"
+                    >
                       <div className="relative h-[400px] rounded-2xl overflow-hidden mb-4">
-                        <img className="w-full h-full object-cover" src={slide.image} alt={slide.title} />
+                        <img
+                          className="w-full h-full object-cover"
+                          src={slide.image}
+                          alt={slide.title}
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                         <div className="absolute bottom-6 left-6 right-6">
-                          <div className="uppercase text-xs tracking-wider text-gray-300 mb-2">{slide.location}</div>
-                          <h3 className="text-xl font-bold mb-3 text-white">{slide.title}</h3>
+                          <div className="uppercase text-xs tracking-wider text-gray-300 mb-2">
+                            {slide.location}
+                          </div>
+                          <h3 className="text-xl font-bold mb-3 text-white">
+                            {slide.title}
+                          </h3>
                           {/* <div className="flex items-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
                             <ArrowRight className="h-4 w-4" />
                           </div> */}
@@ -430,9 +527,7 @@ export default function Index() {
             </div>
           </div>
         </section> */}
-        
-       
-        
+
         {/* Featured Apartments */}
         <section className="section">
           <div className="container">
@@ -447,31 +542,36 @@ export default function Index() {
                 {t.home.featuredAccommodations.description}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredApartments.map((accommodation, index) => (
-                <div key={accommodation.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
+                <div
+                  key={accommodation.id}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                >
                   <AccommodationCard accommodation={accommodation} />
                 </div>
               ))}
             </div>
-            
+
             <div className="text-center mt-12">
               <Button asChild className="btn-primary">
                 <Link to="/accommodations">
-                  {t.home.featuredAccommodations.viewAll} <ArrowRight className="ml-2 h-4 w-4" />
+                  {t.home.featuredAccommodations.viewAll}{" "}
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           </div>
         </section>
-        
+
         {/* Mission Section */}
         {/* <MissionSection /> */}
-        
+
         {/* Testimonials Section */}
         <TestimonialsSection />
-        
+
         {/* Features Section */}
         <section className="section bg-card">
           <div className="container">
@@ -486,25 +586,27 @@ export default function Index() {
                 {t.home.amenities.description}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="glass-card p-6 rounded-xl animate-fade-in flex flex-col items-center text-center"
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
                   <div className="mb-4 p-3 rounded-full bg-primary/10">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {feature.title}
+                  </h3>
                   <p className="text-foreground/70">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="relative py-24 bg-primary/5">
           <div className="container">
@@ -522,7 +624,7 @@ export default function Index() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
