@@ -17,17 +17,24 @@ export interface AccommodationProps {
   features: string[];
 }
 
-export default function AccommodationCard({ accommodation }: { accommodation: AccommodationProps }) {
+export default function AccommodationCard({
+  accommodation,
+}: {
+  accommodation: AccommodationProps;
+}) {
   const { t, language } = useLanguage();
   const [isHovered, setIsHovered] = useState(false);
 
-  const translatedName = language !== 'en' && t.accommodationDescriptions?.[accommodation.id]?.name
-    ? t.accommodationDescriptions[accommodation.id].name
-    : accommodation.name;
+  const translatedName =
+    language !== "en" && t.accommodationDescriptions?.[accommodation.id]?.name
+      ? t.accommodationDescriptions[accommodation.id].name
+      : accommodation.name;
 
-  const translatedDescription = language !== 'en' && t.accommodationDescriptions?.[accommodation.id]?.description
-    ? t.accommodationDescriptions[accommodation.id].description
-    : accommodation.description;
+  const translatedDescription =
+    language !== "en" &&
+    t.accommodationDescriptions?.[accommodation.id]?.description
+      ? t.accommodationDescriptions[accommodation.id].description
+      : accommodation.description;
 
   return (
     <div
@@ -46,7 +53,9 @@ export default function AccommodationCard({ accommodation }: { accommodation: Ac
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
           <div>
-            <h3 className="text-white text-xl font-bold mb-1">{translatedName}</h3>
+            <h3 className="text-white text-xl font-bold mb-1">
+              {translatedName}
+            </h3>
             {/* <div className="flex items-center text-white/80 text-sm mb-2">
               <MapPin className="h-4 w-4 mr-1" />
               <span>{accommodation.location}</span>
@@ -54,8 +63,12 @@ export default function AccommodationCard({ accommodation }: { accommodation: Ac
             <div className="flex items-center space-x-3 text-white">
               <div className="flex items-center">
                 <Users className="h-4 w-4 mr-1" />
-                <span>{accommodation.capacity} {accommodation.capacity === 1 ?
-                  t.accommodations.filters.guests : t.accommodations.filters.guests}</span>
+                <span>
+                  {accommodation.capacity}{" "}
+                  {accommodation.capacity === 1
+                    ? t.accommodations.filters.guests
+                    : t.accommodations.filters.guests}
+                </span>
               </div>
               <div className="flex items-center">
                 <Maximize className="h-4 w-4 mr-1" />
@@ -67,7 +80,9 @@ export default function AccommodationCard({ accommodation }: { accommodation: Ac
       </div>
 
       <div className="p-6 space-y-4">
-        <p className="text-muted-foreground line-clamp-2">{translatedDescription}</p>
+        <p className="text-muted-foreground line-clamp-2">
+          {translatedDescription}
+        </p>
 
         <div className="flex flex-wrap gap-2">
           {accommodation.features.slice(0, 3).map((feature, index) => (
@@ -83,18 +98,27 @@ export default function AccommodationCard({ accommodation }: { accommodation: Ac
           ))}
           {accommodation.features.length > 3 && (
             <div className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full">
-              +{accommodation.features.length - 3} {t.accommodations.filters.more}
+              +{accommodation.features.length - 3}{" "}
+              {t.accommodations.filters.more}
             </div>
           )}
         </div>
 
         <div className="flex items-end justify-between pt-2">
           <div>
-            <span className="text-xl font-bold">{accommodation.price.toLocaleString()} RWF</span>
-            <span className="text-muted-foreground text-sm"> / {t.booking.summary.night}</span>
+            <span className="text-xl font-bold">
+              {accommodation.price.toLocaleString()} RWF
+            </span>
+            <span className="text-muted-foreground text-sm">
+              {" "}
+              / {t.booking.summary.night}
+            </span>
           </div>
           <Button asChild className="btn-primary">
-            <Link to={`/accommodations/${accommodation.id}`}>{t.accommodations.filters.viewDetails}</Link>
+            {/* <Link to={`/accommodations/${accommodation.id}`}>{t.accommodations.filters.viewDetails}</Link> */}
+            <Link to="/accommodation-details">
+              {t.accommodations.filters.viewDetails}
+            </Link>
           </Button>
         </div>
       </div>

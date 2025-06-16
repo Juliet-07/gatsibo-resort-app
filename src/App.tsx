@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,6 +14,7 @@ import CulturalCenter from "./pages/CulturalCenter";
 import ResortOffering from "./pages/ResortOffering";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import AccommodationDetails from "./pages/AccomodationDetails";
 
 // Create a react-query client
 const queryClient = new QueryClient();
@@ -28,6 +28,11 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/accommodations" element={<Accommodations />} />
+            <Route
+              path="/accommodation-details"
+              element={<AccommodationDetails />}
+            />
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />

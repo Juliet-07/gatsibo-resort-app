@@ -76,12 +76,12 @@ export default function ExperiencesCarousel() {
               <p className="text-lg text-white/90 mb-8">
                 Welcome to our collection of transformative experiences in the heart of Rwanda.
               </p>
-              <Button 
+              {/* <Button 
                 variant="outline" 
                 className="border-white text-black hover:bg-white hover:text-black"
               >
                 Explore →
-              </Button>
+              </Button> */}
             </div>
           </div>
 

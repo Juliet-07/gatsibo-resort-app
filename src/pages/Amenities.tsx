@@ -34,9 +34,9 @@ export default function Amenities() {
         <section className="relative py-20 bg-gradient-to-r from-sea-light to-white dark:from-sea-dark dark:to-background">
           <div className="container relative z-10 pt-20">
             <div className="text-center max-w-3xl mx-auto">
-              <span className="text-sm text-primary font-medium uppercase tracking-wider">
+              {/* <span className="text-sm text-primary font-medium uppercase tracking-wider">
                 MareSereno
-              </span>
+              </span> */}
               <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                 {t.amenitiesPage.title}
               </h1>
