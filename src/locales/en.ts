@@ -10,7 +10,7 @@ export const en = {
   },
   hero: {
     subtitle: "Gatsibo Paradise",
-    title: "Welcome to a Place Where Culture Meets Tranquility",
+    title: "Welcome, Murakoze Neza, Bievenue, Karibu To Gatsibo Paradise Resort & Cultural Center",
     description:
       "Nestled in the Eastern Province of Rwanda, our Resort and Cultural Center offers a unique blend of natural beauty and living heritage and also a perfect gateway to Akagera National Park.",
     bookStay: "Book Your Stay",
@@ -228,29 +228,29 @@ export const en = {
     description:
       "Discover a wide range of amenities designed to enhance your stay and provide an unforgettable experience.",
     categories: {
-      wellness: {
-        title: "Wellness & Spa",
-        description:
-          "Relax and rejuvenate with our comprehensive wellness facilities.",
-        items: [
-          {
-            title: "Spa Treatments",
-            description: "Professional massage and beauty treatments",
-          },
-          {
-            title: "Fitness Center",
-            description: "Modern equipment and personal training",
-          },
-          {
-            title: "Swimming Pool",
-            description: "Outdoor pool with stunning views",
-          },
-          {
-            title: "Yoga Studio",
-            description: "Daily classes and meditation sessions",
-          },
-        ],
-      },
+      // wellness: {
+      //   title: "Wellness & Spa",
+      //   description:
+      //     "Relax and rejuvenate with our comprehensive wellness facilities.",
+      //   items: [
+      //     {
+      //       title: "Spa Treatments",
+      //       description: "Professional massage and beauty treatments",
+      //     },
+      //     {
+      //       title: "Fitness Center",
+      //       description: "Modern equipment and personal training",
+      //     },
+      //     {
+      //       title: "Swimming Pool",
+      //       description: "Outdoor pool with stunning views",
+      //     },
+      //     {
+      //       title: "Yoga Studio",
+      //       description: "Daily classes and meditation sessions",
+      //     },
+      //   ],
+      // },
       dining: {
         title: "Dining & Cuisine",
         description:
@@ -261,8 +261,8 @@ export const en = {
             description: "International cuisine with local specialties",
           },
           {
-            title: "Pool Bar",
-            description: "Refreshing drinks and light snacks",
+            title: "Event Catering",
+            description: "Foods for weddings or any event according to specifications",
           },
           {
             title: "Cultural Café",
@@ -301,14 +301,17 @@ export const en = {
             title: "Cultural Shows",
             description: "Traditional dance and music performances",
           },
-          { title: "Game Room", description: "Indoor games and entertainment" },
           {
-            title: "Library",
-            description: "Reading area with local literature",
+            title: "Camping Grounds",
+            description: "Experience nature up close with secure, scenic camping areas for tents and outdoor living."
           },
           {
+            title: "Creative Arts",
+            description: "Explore artistic expression through painting sessions, exhibitions, and cultural showcases."
+          },          
+          {
             title: "Craft Workshops",
-            description: "Learn traditional Rwandan crafts",
+            description: "Learn traditional Rwandan crafts like Textile weaving & finishing",
           },
         ],
       },
