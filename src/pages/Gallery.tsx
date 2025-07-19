@@ -80,60 +80,60 @@ const galleryImages = [
     alt: "Spa",
     category: "amenities"
   },
-  {
-    id: 13,
-    src: "https://images.unsplash.com/photo-1519074069444-1752457ea266?w=800&h=600&fit=crop",
-    alt: "Lush green hills of Rwanda",
-    category: "nature"
-  },
-  {
-    id: 14,
-    src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop",
-    alt: "Scenic view of Volcanoes National Park",
-    category: "nature"
-  },
-  {
-    id: 15,
-    src: "https://images.unsplash.com/photo-1536338600004-83390818c136?w=800&h=600&fit=crop",
-    alt: "Wildlife in Akagera National Park",
-    category: "nature"
-  },
-  {
-    id: 16,
-    src: "https://images.unsplash.com/photo-1530532643200-a01f6a2e07c9?w=800&h=600&fit=crop",
-    alt: "Smiling Rwandan woman",
-    category: "people"
-  },
-  {
-    id: 17,
-    src: "https://images.unsplash.com/photo-1604320926302-a00603561341?w=800&h=600&fit=crop",
-    alt: "Rwandan children playing",
-    category: "people"
-  },
-  {
-    id: 18,
-    src: "https://images.unsplash.com/photo-1542754931-097152774808?w=800&h=600&fit=crop",
-    alt: "Local artisan crafting goods",
-    category: "people"
-  },
-  {
-    id: 19,
-    src: "https://images.unsplash.com/photo-1569940807340-13cf378b5013?w=800&h=600&fit=crop",
-    alt: "Traditional Intore dancers performing",
-    category: "tradition"
-  },
-  {
-    id: 20,
-    src: "https://images.unsplash.com/photo-1604320926402-a00603561341?w=800&h=600&fit=crop",
-    alt: "Woman in traditional Rwandan umushanana attire",
-    category: "tradition"
-  },
-  {
-    id: 21,
-    src: "https://images.unsplash.com/photo-1542754931-097152774808?w=800&h=600&fit=crop",
-    alt: "Close-up of traditional Imigongo art",
-    category: "tradition"
-  },
+  // {
+  //   id: 13,
+  //   src: "https://images.unsplash.com/photo-1519074069444-1752457ea266?w=800&h=600&fit=crop",
+  //   alt: "Lush green hills of Rwanda",
+  //   category: "nature"
+  // },
+  // {
+  //   id: 14,
+  //   src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop",
+  //   alt: "Scenic view of Volcanoes National Park",
+  //   category: "nature"
+  // },
+  // {
+  //   id: 15,
+  //   src: "https://images.unsplash.com/photo-1536338600004-83390818c136?w=800&h=600&fit=crop",
+  //   alt: "Wildlife in Akagera National Park",
+  //   category: "nature"
+  // },
+  // {
+  //   id: 16,
+  //   src: "https://images.unsplash.com/photo-1530532643200-a01f6a2e07c9?w=800&h=600&fit=crop",
+  //   alt: "Smiling Rwandan woman",
+  //   category: "people"
+  // },
+  // {
+  //   id: 17,
+  //   src: "https://images.unsplash.com/photo-1604320926302-a00603561341?w=800&h=600&fit=crop",
+  //   alt: "Rwandan children playing",
+  //   category: "people"
+  // },
+  // {
+  //   id: 18,
+  //   src: "https://images.unsplash.com/photo-1542754931-097152774808?w=800&h=600&fit=crop",
+  //   alt: "Local artisan crafting goods",
+  //   category: "people"
+  // },
+  // {
+  //   id: 19,
+  //   src: "https://images.unsplash.com/photo-1569940807340-13cf378b5013?w=800&h=600&fit=crop",
+  //   alt: "Traditional Intore dancers performing",
+  //   category: "tradition"
+  // },
+  // {
+  //   id: 20,
+  //   src: "https://images.unsplash.com/photo-1604320926402-a00603561341?w=800&h=600&fit=crop",
+  //   alt: "Woman in traditional Rwandan umushanana attire",
+  //   category: "tradition"
+  // },
+  // {
+  //   id: 21,
+  //   src: "https://images.unsplash.com/photo-1542754931-097152774808?w=800&h=600&fit=crop",
+  //   alt: "Close-up of traditional Imigongo art",
+  //   category: "tradition"
+  // },
   {
     id: 22,
     src: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&h=600&fit=crop",
@@ -146,12 +146,12 @@ const galleryImages = [
     alt: "Local community market event",
     category: "events"
   },
-  {
-    id: 24,
-    src: "https://images.unsplash.com/photo-1561414227-6d20a915f8e3?w=800&h=600&fit=crop",
-    alt: "Elegant outdoor celebration setup",
-    category: "events"
-  },
+  // {
+  //   id: 24,
+  //   src: "https://images.unsplash.com/photo-1561414227-6d20a915f8e3?w=800&h=600&fit=crop",
+  //   alt: "Elegant outdoor celebration setup",
+  //   category: "events"
+  // },
 ];
 
 export default function Gallery() {
@@ -235,7 +235,7 @@ export default function Gallery() {
         <section className="py-8">
           <div className="container">
             <div className="flex flex-wrap justify-center gap-2 mb-8 animate-fade-in">
-              {["all", "exterior", "rooms", "amenities", "nature", "people", "tradition", "events"].map((category) => (
+              {["all", "exterior", "rooms", "amenities", "events"].map((category) => (
                 <button
                   key={category}
                   onClick={() => filterGallery(category)}
